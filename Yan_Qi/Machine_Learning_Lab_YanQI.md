@@ -116,10 +116,15 @@ Now your manager has a basic understanding of why customers returned orders. Nex
 
 ### Problem 6: Evaluating Models
 - What is the best metric to evaluate your model. Is accuracy good for this case?
+  Confusion matrix, precision and recall, are good metrics for evaluating the model. Classification accuracy is not a good metric. With the highly imbalanced classes, the accuracy can still be high even if the minority class is all misclassified. 
+
 - Now you have multiple models, which one would you pick? 
+  I will pick the model with higher recall. Here we are primarily interested in the model's ability to predict returns correctly (proportion of true returned predicted as returned. )
+
 - Can you get any clue from the confusion matrix? What is the meaning of precision and recall in this case? Which one do you care the most? How will your model help the manager make decisions?
 - **Note:** The last question is open-ended. Your answer could be completely different depending on your understanding of this business problem.
 
 ### Problem 7: Feature Engineering Revisit
 - Is there anything wrong with the new feature we generated? How should we fix it?
 - ***Hint***: For the real test set, we do not know it will get returned or not.
+The feature "the number of times a product is returned" is based on the response variable we are trying to predict. 
